@@ -15,10 +15,10 @@ function fib () {
 fib 8
 function rec_fib () {
         if [ "$1" = "0" ] || [ "$1" = "1" ]; then
-                return $1
+                echo $1
         else    
                 #rec_fib($1 - 1) + rec_fib($ - 2)
-                return $(( $(rec_fib $(($1 - 1)) + $(rec_fib $(($1 - 2))))))    
+                echo $(( $(rec_fib $(($1 - 1))) + $(rec_fib $(($1 - 2)))))
         fi
 }
 rec_fib 1
